@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Hair</title>
+    <meta name="description" content="The Art of Hair - Profesjonalne usługi fryzjerskie dopasowane do Twojego stylu. Skontaktuj się z nami, aby umówić wizytę.">
+    <meta name="keywords" content="fryzjer, salon fryzjerski, stylizacja włosów, The Art of Hair, kontakt, wizyta">
+    <meta name="title" content="The Art of Hair">
+    <!-- Open Graph for SEO and social sharing -->
+    <meta property="og:title" content="The Art of Hair">
+    <meta property="og:description" content="Profesjonalne usługi fryzjerskie dopasowane do Twojego stylu. Skontaktuj się z nami, aby umówić wizytę.">
+    <meta property="og:image" content="https://theartofhair.com/logo.png">
+    <meta property="og:url" content="https://theartofhair.com/">
+    <meta property="og:type" content="website">
+    <!-- Theme color for search results -->
+    <meta name="theme-color" content="#0a0a0a">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="pl" href="https://theartofhair.com/">
+    <link rel="alternate" hreflang="en" href="https://theartofhair.com/en.html">
+    <!-- Structured data for WebPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "The Art of Hair",
+        "description": "Profesjonalne usługi fryzjerskie dopasowane do Twojego stylu. Skontaktuj się z nami, aby umówić wizytę.",
+        "url": "https://theartofhair.com/",
+        "inLanguage": "pl"
+    }
+    </script>
+    <!-- Structured data for LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "The Art of Hair",
+        "image": "https://theartofhair.com/logo.png",
+        "telephone": "+48 123 456 789",
+        "email": "kontakt@theartofhair.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Piękna 123",
+            "addressLocality": "Warszawa",
+            "addressCountry": "PL"
+        },
+        "url": "https://theartofhair.com/"
+    }
+    </script>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e0e0e0;
+            --accent-color: #D4AF37;
+            --dark-gray: #111111;
+            --light-gray: #a0a0a0;
+        }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; padding-top: 70px; font-family: 'Lato', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; font-size: 18px; font-weight: 300; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        .sticky-header { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 0; border-bottom: 1px solid #222; height: 40px; }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 100%; }
+        .header-left, .header-right { flex: 1; display: flex; }
+        .header-left { justify-content: flex-start; }
+        .header-right { justify-content: flex-end; }
+        .header-center { flex: 2; display: flex; justify-content: center; }
+        
+        .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .logo-img { height: 35px; }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--accent-color); }
+        .nav-button { padding: 10px 20px; font-size: 0.9rem; font-weight: 700; border: 1px solid var(--accent-color); border-radius: 5px; background-color: transparent; color: var(--accent-color); cursor: pointer; text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 8px; }
+        .nav-button:hover { background-color: var(--accent-color); color: var(--bg-color); }
+        .nav-button img { width: 24px; height: 24px; }
+        .nav-button-text { display: inline; }
+        
+        .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 10vw, 5.5rem); margin: 20px 0; color: white; line-height: 1.1; font-weight: 700; }
+        .hero p { font-size: 1.25rem; color: var(--light-gray); margin-bottom: 50px; max-width: 650px; margin-left: auto; margin-right: auto; }
+        .cta-button { padding: 18px 35px; font-size: 1.2rem; font-weight: 700; border: none; border-radius: 5px; color: #1a1001; cursor: pointer; text-decoration: none; display: inline-block; position: relative; overflow: hidden; z-index: 1; background: linear-gradient(45deg, #b8860b, #d4af37, #fcf6ba, #d4af37, #b8860b); background-size: 400% 400%; transition: all 0.5s ease; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); }
+        .cta-button::before { content: ''; position: absolute; top: 0; left: -150%; width: 100%; height: 100%; background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.5), transparent); transform: skewX(-25deg); transition: left 0.8s ease; }
+        .cta-button:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4); }
+        .cta-button:hover::before { left: 150%; }
+
+        .section { padding: 100px 20px; text-align: center; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: white; margin-bottom: 20px; }
+        .section-subtitle { font-size: 1.2rem; color: var(--light-gray); max-width: 700px; margin: 0 auto 80px auto; }
+        .gallery-section { background-color: var(--dark-gray); padding: 100px 20px; }
+        .gallery-container { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+        .slider-container { position: relative; max-width: 600px; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); background: transparent; box-sizing: border-box; }
+        .slider-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .before-image { z-index: 1; }
+        .after-image { clip-path: inset(0 0 0 50%); z-index: 2; filter: none; }
+        .slider { position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background-color: var(--accent-color); cursor: ew-resize; z-index: 3; display: flex; align-items: center; justify-content: center; }
+        .slider img { width: 40px; height: 40px; opacity: 1; filter: none; }
+        .slider-label { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); font-size: 0.75rem; color: white; z-index: 3; }
+        .slider-label span { background: rgba(0, 0, 0, 0.7); padding: 3px 8px; border-radius: 4px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; }
+        .contact-section { background-color: var(--dark-gray); padding: 100px 20px; }
+        .contact-icons { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+        .contact-icon { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--text-color); transition: transform 0.3s ease; }
+        .contact-icon img { width: 40px; height: 40px; margin-bottom: 10px; }
+        .contact-icon:hover { transform: scale(1.1); }
+        .contact-icon span { font-size: 1rem; font-weight: 400; }
+        .footer { padding: 60px 20px; font-size: 0.9rem; color: #777; text-align: center; border-top: 1px solid #222; }
+        .footer-logo-container { margin-bottom: 30px; }
+        .footer-logo { height: 80px; }
+        .footer-brand-text { font-size: 1.1rem; color: var(--light-gray); margin-top: 0; font-style: italic; }
+        .reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .language-dropdown-button {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+            font-family: 'Playfair Display', serif;
+        }
+        .language-dropdown-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+        .language-dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a1a1a;
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            z-index: 1001;
+            min-width: 100px;
+        }
+        .language-dropdown-content a {
+            display: block;
+            padding: 8px 15px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+        .language-dropdown-content a:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        .language-dropdown-content a.active {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: 700;
+        }
+        .language-dropdown.open .language-dropdown-content { display: block; }
+
+        @media (min-width: 769px) {
+            .language-dropdown-button { font-size: 1.1rem; padding: 8px 15px; }
+            .language-dropdown-content a { padding: 10px 20px; font-size: 1.1rem; }
+            .slider-container { max-width: 600px; }
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 16px; padding-top: 60px; }
+            .container { padding: 20px 15px; }
+            .header-content { position: relative; justify-content: space-between; }
+            .header-left { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); }
+            .header-left .logo-text { display: none; }
+            .header-center { display: flex; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+            .header-center .logo-img { display: none; }
+            .header-center .logo-text { font-size: 1.6rem; }
+            .header-right { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+            .nav-button-text { display: none; }
+            .nav-button { padding: 8px 12px; }
+            .nav-button img { width: 20px; height: 20px; }
+            .hero p { font-size: 1.1rem; }
+            .section { padding: 50px 15px; }
+            .section-title { font-size: 2.2rem; }
+            .section-subtitle { font-size: 1.1rem; margin-bottom: 40px; }
+            .slider-container { max-width: 100%; }
+            .slider-label { font-size: 0.65rem; }
+            .slider-label span { padding: 2px 6px; max-width: 100px; }
+            .slider img { width: 32px; height: 32px; }
+            .contact-icon img { width: 30px; height: 30px; }
+            .contact-icon span { font-size: 0.9rem; }
+            .footer { padding: 50px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="language-dropdown">
+                    <button class="language-dropdown-button" onclick="toggleDropdown()" aria-label="Zmień język">
+                        <img src="globe.png" width="20" height="20" alt="Przełącznik języka" loading="lazy">
+                        PL
+                    </button>
+                    <div class="language-dropdown-content">
+                        <a href="index.html" class="active">PL</a>
+                        <a href="en.html">EN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-center">
+                <a href="#" class="logo-container">
+                    <img src="logo.png" alt="The Art of Hair Logo" class="logo-img" loading="lazy">
+                    <span class="logo-text">The Art of Hair</span>
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="https://www.instagram.com/theartofhair" target="_blank" class="nav-button">
+                    <img src="instagram-icon.png" alt="Ikona Instagrama" loading="lazy">
+                    <span class="nav-button-text">Odwiedź nasz Instagram</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <h1 class="reveal">The Art of Hair</h1>
+        <p class="reveal">Przekształć swój wygląd dzięki naszym profesjonalnym usługom fryzjerskim. Tworzymy spersonalizowane stylizacje, które odzwierciedlają Twoją wyjątkową osobowość. Skontaktuj się z nami już dziś, aby umówić wizytę.</p>
+        <a href="#contact-section" class="cta-button reveal" aria-label="Skontaktuj się z nami">Skontaktuj się z nami</a>
+    </section>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Twój Styl, Nasze Rzemiosło</h2>
+                <p class="section-subtitle reveal">W The Art of Hair wierzymy w tworzenie fryzur, które podkreślają Twoją indywidualność. Dzięki wieloletniemu doświadczeniu i pasji do precyzji dostarczamy rezultaty, które sprawiają, że czujesz się pewnie i odświeżony.</p>
+            </div>
+        </section>
+
+        <section class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title reveal">Przed i Po</h2>
+                <p class="section-subtitle reveal">Przesuń suwak, aby zobaczyć, jak nasze usługi fryzjerskie przekształcają wygląd naszych klientów. Oto przykład naszej pracy, a wkrótce pojawi się więcej!</p>
+                <div class="gallery-container reveal">
+                    <div class="slider-container">
+                        <img src="before1.jpg" alt="Przed stylizacją" class="slider-image before-image" loading="lazy">
+                        <img src="after1.jpg" alt="Po stylizacji" class="slider-image after-image" loading="lazy">
+                        <div class="slider">
+                            <img src="arrows-icon.png" alt="Ikona strzałek suwaka" loading="lazy">
+                        </div>
+                        <div class="slider-label">
+                            <span class="center-label">Po</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title reveal">Skontaktuj się z nami</h2>
+                <p class="section-subtitle reveal">Gotowy na zmianę stylu? Skontaktuj się z nami za pomocą preferowanej metody poniżej, aby umówić wizytę lub zadać pytania.</p>
+                <div class="contact-icons reveal">
+                    <a href="tel:+48123456789" class="contact-icon">
+                        <img src="phone-icon.png" alt="Ikona telefonu" loading="lazy">
+                        <span>+48 123 456 789</span>
+                    </a>
+                    <a href="mailto:kontakt@theartofhair.com" class="contact-icon">
+                        <img src="email-icon.png" alt="Ikona e-mail" loading="lazy">
+                        <span>kontakt@theartofhair.com</span>
+                    </a>
+                    <a href="https://wa.me/48123456789" target="_blank" class="contact-icon">
+                        <img src="whatsapp-icon.png" alt="Ikona WhatsApp" loading="lazy">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://m.me/theartofhair" target="_blank" class="contact-icon">
+                        <img src="messenger-icon.png" alt="Ikona Messenger" loading="lazy">
+                        <span>Messenger</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo-container">
+                <img src="logo.png" alt="The Art of Hair Logo" class="footer-logo" loading="lazy">
+            </div>
+            <p class="footer-brand-text"><strong>The Art of Hair</strong><br>
+            "Twoje włosy, Twoja historia, nasze arcydzieło."</p>
+            <p style="margin-top: 30px;">© 2025 The Art of Hair. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = event.target.closest('.language-dropdown');
+            dropdown.classList.toggle('open');
+        }
+
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.language-dropdown');
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => { revealObserver.observe(el); });
+
+        const sliders = document.querySelectorAll('.slider-container');
+        sliders.forEach(sliderContainer => {
+            const slider = sliderContainer.querySelector('.slider');
+            const afterImage = sliderContainer.querySelector('.after-image');
+            const centerLabel = sliderContainer.querySelector('.center-label');
+            let isDragging = false;
+
+            const updateSlider = (x) => {
+                const rect = sliderContainer.getBoundingClientRect();
+                const offsetX = x - rect.left;
+                let percentage = (offsetX / rect.width) * 100;
+                percentage = Math.max(0, Math.min(100, percentage));
+                afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+                slider.style.left = `${percentage}%`;
+                // Zmiana tekstu napisu na środku
+                centerLabel.textContent = percentage < 50 ? 'Po' : 'Przed stylizacją';
+            };
+
+            slider.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                updateSlider(e.clientX);
+            });
+
+            slider.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                updateSlider(e.touches[0].clientX);
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    updateSlider(e.clientX);
+                }
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (isDragging) {
+                    updateSlider(e.touches[0].clientX);
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-18M8JLYN5S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-18M8JLYN5S');
+    </script>
+</body>
+</html>
