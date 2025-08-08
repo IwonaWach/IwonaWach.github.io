@@ -65,7 +65,7 @@
             --light-gray: #a0a0a0;
         }
         html { scroll-behavior: smooth; }
-        body { margin: 0; padding-top: 70px; font-family: 'Lato', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; font-size: 18px; font-weight: 300; }
+        body { margin: 0; padding-top: 40px; font-family: 'Lato', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; font-size: 18px; font-weight: 300; }
         .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
         
         .sticky-header { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 0; border-bottom: 1px solid #222; height: 40px; }
@@ -99,7 +99,7 @@
             max-height: 50vh;
             width: auto;
             height: auto;
-            margin: 20px auto;
+            margin: 5px auto;
             display: block;
             position: relative;
             z-index: 10;
@@ -107,7 +107,7 @@
         .hero p {
             font-size: 1.25rem;
             color: var(--light-gray);
-            margin-bottom: 50px;
+            margin-bottom: 10px;
             max-width: 650px;
             margin-left: auto;
             margin-right: auto;
@@ -148,10 +148,10 @@
         }
         .cta-button:hover::before { left: 150%; }
 
-        .section { padding: 100px 20px; text-align: center; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: white; margin-bottom: 20px; }
-        .section-subtitle { font-size: 1.2rem; color: var(--light-gray); max-width: 700px; margin: 0 auto 80px auto; }
-        .gallery-section { background-color: var(--dark-gray); padding: 100px 20px; }
+        .section { padding: 20px 20px; text-align: center; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: white; margin-bottom: 10px; }
+        .section-subtitle { font-size: 1.2rem; color: var(--light-gray); max-width: 700px; margin: 0 auto 12px auto; }
+        .gallery-section { background-color: var(--dark-gray); padding: 20px 20px; }
         .gallery-container { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
         .slider-container { position: relative; max-width: 600px; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); background: transparent; box-sizing: border-box; }
         .slider-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -183,94 +183,31 @@
             50% { opacity: 1; }
             100% { opacity: 0; }
         }
-        .faq-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(45deg, #b8860b, #d4af37, #fcf6ba, #d4af37, #b8860b);
-            background-size: 400% 400%;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1001;
-            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
-            animation: pulse 2s infinite;
-            color: #1a1001;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        .faq-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        .faq-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-            display: none;
-            transition: opacity 0.3s ease;
-        }
-        .faq-overlay.active {
-            display: block;
-            opacity: 1;
-        }
-        .faq-modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            max-width: 90%;
-            max-height: 80vh;
+        .faq-section {
+            padding: 20px 20px;
             background-color: var(--dark-gray);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
-            padding: 20px;
-            z-index: 1001;
-            overflow-y: auto;
+        }
+        .faq-button {
+            margin-bottom: 10px;
+        }
+        .faq-content {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
             display: none;
-            transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        .faq-modal.active {
+        .faq-content.active {
             display: block;
-            transform: translate(-50%, -50%) scale(1);
             opacity: 1;
+            transform: translateY(0);
         }
-        .faq-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            color: var(--text-color);
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .faq-close:hover {
-            color: var(--accent-color);
-        }
-        .faq-modal h3 {
+        .faq-content h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             color: var(--accent-color);
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-align: center;
         }
         .faq-items {
@@ -321,14 +258,14 @@
         }
         .contact-section {
             background-color: var(--dark-gray);
-            padding: 100px 20px;
+            padding: 20px 20px;
         }
         .contact-icons {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
-            margin-top: 40px;
+            margin-top: 12px;
         }
         .contact-icon {
             display: flex;
@@ -387,16 +324,17 @@
             color: var(--light-gray);
             margin-top: 5px;
             font-family: 'Lato', sans-serif;
+            display: block;
         }
         .footer {
-            padding: 60px 20px;
+            padding: 20px 20px;
             font-size: 0.9rem;
             color: #777;
             text-align: center;
             border-top: 1px solid #222;
         }
         .footer-logo-container {
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         .footer-logo {
             height: 80px;
@@ -409,7 +347,7 @@
         }
         .business-info {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .business-info h3 {
             font-family: 'Playfair Display', serif;
@@ -511,7 +449,7 @@
         @media (max-width: 768px) {
             body {
                 font-size: 16px;
-                padding-top: 60px;
+                padding-top: 40px;
             }
             .container {
                 padding: 20px 15px;
@@ -552,31 +490,41 @@
                 display: none;
             }
             .nav-button {
-                padding: 6px 10px;
+                padding: 5px 8px;
             }
             .nav-button img {
                 width: 16px;
                 height: 16px;
             }
+            .nav-button.disabled::after {
+                content: '🔜';
+                font-size: 0.8rem;
+                margin-left: 5px;
+            }
+            .coming-soon {
+                display: none;
+            }
             .hero {
                 min-height: 80vh;
             }
             .hero-logo {
-                max-height: 50vh;
-                margin: 15px auto;
+                max-height: 44vh;
+                margin: 5px auto;
             }
             .hero p {
                 font-size: 1.1rem;
+                margin-bottom: 10px;
             }
             .section {
-                padding: 50px 15px;
+                padding: 30px 15px;
             }
             .section-title {
                 font-size: 2.2rem;
+                margin-bottom: 10px;
             }
             .section-subtitle {
                 font-size: 1.1rem;
-                margin-bottom: 40px;
+                margin-bottom: 12px;
             }
             .slider-container {
                 max-width: 100%;
@@ -609,18 +557,12 @@
             .contact-icon span {
                 font-size: 0.8rem;
             }
-            .faq-toggle {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
+            .faq-section {
+                padding: 20px 15px;
             }
-            .faq-modal {
-                width: 90%;
-                max-height: 90vh;
-                padding: 15px;
-            }
-            .faq-modal h3 {
+            .faq-content h3 {
                 font-size: 1.5rem;
+                margin-bottom: 10px;
             }
             .faq-question {
                 font-size: 0.9rem;
@@ -636,15 +578,13 @@
             }
             .business-info h3 {
                 font-size: 1.3rem;
+                margin-bottom: 10px;
             }
             .business-info p {
                 font-size: 0.8rem;
             }
             .footer {
-                padding: 50px 15px;
-            }
-            .coming-soon {
-                font-size: 0.55rem;
+                padding: 20px 15px;
             }
         }
     </style>
@@ -714,6 +654,65 @@
             </div>
         </section>
 
+        <section class="section faq-section">
+            <div class="container">
+                <button class="cta-button faq-button reveal">Najczęściej Zadawane Pytania</button>
+                <div class="faq-content">
+                    <h3>Najczęściej Zadawane Pytania</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <button class="faq-question">Jak długo trwa zabieg przedłużania włosów?</button>
+                            <div class="faq-answer">Zabieg trwa zazwyczaj od 2 do 4 godzin, w zależności od techniki i ilości przedłużanych włosów.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Czy przedłużanie włosów jest bezpieczne dla naturalnych włosów?</button>
+                            <div class="faq-answer">Tak, stosujemy bezpieczne techniki, które minimalizują uszkodzenia naturalnych włosów, jeśli są odpowiednio pielęgnowane.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Jak umówić się na wizytę?</button>
+                            <div class="faq-answer">Skontaktuj się z nami przez telefon, e-mail lub WhatsApp, aby ustalić dogodny termin wizyty.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Jakie techniki przedłużania oferujecie?</button>
+                            <div class="faq-answer">Oferujemy różne techniki, takie jak metoda keratynowa, taśmowa czy mikroringi, dostosowane do potrzeb klienta.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Jak długo utrzymują się przedłużane włosy?</button>
+                            <div class="faq-answer">Przy odpowiedniej pielęgnacji przedłużane włosy mogą utrzymywać się od 2 do 6 miesięcy.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Czy mogę farbować przedłużane włosy?</button>
+                            <div class="faq-answer">Tak, ale zalecamy konsultację z nami, aby dobrać odpowiednią farbę i technikę.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Jak dbać o przedłużane włosy?</button>
+                            <div class="faq-answer">Zalecamy używanie delikatnych szamponów, unikanie gorących narzędzi bez ochrony i regularne szczotkowanie specjalną szczotką.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Czy oferujecie konsultacje przed zabiegiem?</button>
+                            <div class="faq-answer">Tak, oferujemy bezpłatne konsultacje, aby omówić Twoje potrzeby i dobrać najlepszą metodę.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Jakie są koszty przedłużania włosów?</button>
+                            <div class="faq-answer">Koszty zależą od techniki i długości włosów. Skontaktuj się z nami, aby uzyskać szczegółową wycenę.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Czy przedłużanie włosów boli?</button>
+                            <div class="faq-answer">Nie, zabieg jest bezbolesny, choć możesz odczuwać lekki dyskomfort podczas aplikacji.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Czy muszę kupić włosy przed zabiegiem, czy fryzjerka wybiera włosy?</button>
+                            <div class="faq-answer">Oferujemy możliwość dostarczenia włosów przez nas, dopasowanych do Twoich potrzeb, ale możesz także przynieść własne włosy po konsultacji.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Czy mogę przynieść własne włosy, czy muszę użyć włosów wybranych przez fryzjerkę?</button>
+                            <div class="faq-answer">Możesz przynieść własne włosy, pod warunkiem że spełniają nasze standardy jakości. Skonsultuj się z nami wcześniej, aby upewnić się, że są odpowiednie.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact-section" class="section contact-section">
             <div class="container">
                 <h2 class="section-title reveal">Skontaktuj się z nami</h2>
@@ -741,63 +740,6 @@
         </section>
     </main>
 
-    <button class="faq-toggle" aria-label="Otwórz najczęściej zadawane pytania">?</button>
-    <div class="faq-overlay"></div>
-    <div class="faq-modal">
-        <button class="faq-close" aria-label="Zamknij FAQ">✕</button>
-        <h3>Najczęściej Zadawane Pytania</h3>
-        <div class="faq-items">
-            <div class="faq-item">
-                <button class="faq-question">Jak długo trwa zabieg przedłużania włosów?</button>
-                <div class="faq-answer">Zabieg trwa zazwyczaj od 2 do 4 godzin, w zależności od techniki i ilości przedłużanych włosów.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Czy przedłużanie włosów jest bezpieczne dla naturalnych włosów?</button>
-                <div class="faq-answer">Tak, stosujemy bezpieczne techniki, które minimalizują uszkodzenia naturalnych włosów, jeśli są odpowiednio pielęgnowane.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Jak umówić się na wizytę?</button>
-                <div class="faq-answer">Skontaktuj się z nami przez telefon, e-mail lub WhatsApp, aby ustalić dogodny termin wizyty.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Jakie techniki przedłużania oferujecie?</button>
-                <div class="faq-answer">Oferujemy różne techniki, takie jak metoda keratynowa, taśmowa czy mikroringi, dostosowane do potrzeb klienta.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Jak długo utrzymują się przedłużane włosy?</button>
-                <div class="faq-answer">Przy odpowiedniej pielęgnacji przedłużane włosy mogą utrzymywać się od 2 do 6 miesięcy.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Czy mogę farbować przedłużane włosy?</button>
-                <div class="faq-answer">Tak, ale zalecamy konsultację z nami, aby dobrać odpowiednią farbę i technikę.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Jak dbać o przedłużane włosy?</button>
-                <div class="faq-answer">Zalecamy używanie delikatnych szamponów, unikanie gorących narzędzi bez ochrony i regularne szczotkowanie specjalną szczotką.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Czy oferujecie konsultacje przed zabiegiem?</button>
-                <div class="faq-answer">Tak, oferujemy bezpłatne konsultacje, aby omówić Twoje potrzeby i dobrać najlepszą metodę.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Jakie są koszty przedłużania włosów?</button>
-                <div class="faq-answer">Koszty zależą od techniki i długości włosów. Skontaktuj się z nami, aby uzyskać szczegółową wycenę.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Czy przedłużanie włosów boli?</button>
-                <div class="faq-answer">Nie, zabieg jest bezbolesny, choć możesz odczuwać lekki dyskomfort podczas aplikacji.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Czy muszę kupić włosy przed zabiegiem, czy fryzjerka wybiera włosy?</button>
-                <div class="faq-answer">Oferujemy możliwość dostarczenia włosów przez nas, dopasowanych do Twoich potrzeb, ale możesz także przynieść własne włosy po konsultacji.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Czy mogę przynieść własne włosy, czy muszę użyć włosów wybranych przez fryzjerkę?</button>
-                <div class="faq-answer">Możesz przynieść własne włosy, pod warunkiem że spełniają nasze standardy jakości. Skonsultuj się z nami wcześniej, aby upewnić się, że są odpowiednie.</div>
-            </div>
-        </div>
-    </div>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-logo-container">
@@ -813,7 +755,7 @@
                    E-mail: <a href="mailto:theartofhair.iwonawach@gmail.com">theartofhair.iwonawach@gmail.com</a><br>
                    Działamy w Polsce, a wkrótce także w Holandii!</p>
             </div>
-            <p style="margin-top: 30px;">© 2025 The Art of Hair. Wszelkie prawa zastrzeżone.</p>
+            <p style="margin-top: 10px;">© 2025 The Art of Hair. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
 
@@ -832,21 +774,10 @@
             });
         });
 
-        const faqToggle = document.querySelector('.faq-toggle');
-        const faqOverlay = document.querySelector('.faq-overlay');
-        const faqModal = document.querySelector('.faq-modal');
-        const faqClose = document.querySelector('.faq-close');
-        faqToggle.addEventListener('click', () => {
-            faqOverlay.classList.toggle('active');
-            faqModal.classList.toggle('active');
-        });
-        faqClose.addEventListener('click', () => {
-            faqOverlay.classList.remove('active');
-            faqModal.classList.remove('active');
-        });
-        faqOverlay.addEventListener('click', () => {
-            faqOverlay.classList.remove('active');
-            faqModal.classList.remove('active');
+        const faqButton = document.querySelector('.faq-button');
+        const faqContent = document.querySelector('.faq-content');
+        faqButton.addEventListener('click', () => {
+            faqContent.classList.toggle('active');
         });
 
         const revealElements = document.querySelectorAll('.reveal');
@@ -973,12 +904,12 @@
         });
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="TU WPISZ GOOGLETAG"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-18M8JLYN5S"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'tu wpisz same liczby i litery');
+      gtag('config', 'G-18M8JLYN5S');
     </script>
 </body>
 </html>
