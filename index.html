@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Art of Hair</title>
-    <meta name="description" content="The Art of Hair - Profesjonalne usługi fryzjerskie dopasowane do Twojego stylu. Skontaktuj się z nami, aby umówić wizytę.">
-    <meta name="keywords" content="fryzjer, salon fryzjerski, stylizacja włosów, The Art of Hair, kontakt, wizyta">
+    <meta name="description" content="The Art of Hair - Usługi przedłużania włosów dopasowane do Twojego stylu. Działamy w Polsce, a wkrótce w Holandii. Skontaktuj się z nami, aby umówić wizytę.">
+    <meta name="keywords" content="przedłużanie włosów, salon fryzjerski, stylizacja włosów, The Art of Hair, Jaworzno, kontakt, wizyta">
     <meta name="title" content="The Art of Hair">
     <!-- Open Graph for SEO and social sharing -->
     <meta property="og:title" content="The Art of Hair">
-    <meta property="og:description" content="Profesjonalne usługi fryzjerskie dopasowane do Twojego stylu. Skontaktuj się z nami, aby umówić wizytę.">
-    <meta property="og:image" content="https://theartofhair.com/logo.png">
-    <meta property="og:url" content="https://theartofhair.com/">
+    <meta property="og:description" content="Usługi przedłużania włosów dopasowane do Twojego stylu. Działamy w Polsce, a wkrótce w Holandii. Skontaktuj się z nami, aby umówić wizytę.">
+    <meta property="og:image" content="https://theartofhair.giize.com/logo.png">
+    <meta property="og:url" content="https://theartofhair.giize.com/">
     <meta property="og:type" content="website">
     <!-- Theme color for search results -->
     <meta name="theme-color" content="#0a0a0a">
@@ -25,16 +25,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <!-- Hreflang tags -->
-    <link rel="alternate" hreflang="pl" href="https://theartofhair.com/">
-    <link rel="alternate" hreflang="en" href="https://theartofhair.com/en.html">
+    <link rel="alternate" hreflang="pl" href="https://theartofhair.giize.com/">
+    <link rel="alternate" hreflang="en" href="https://theartofhair.giize.com/en.html">
     <!-- Structured data for WebPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "The Art of Hair",
-        "description": "Profesjonalne usługi fryzjerskie dopasowane do Twojego stylu. Skontaktuj się z nami, aby umówić wizytę.",
-        "url": "https://theartofhair.com/",
+        "description": "Usługi przedłużania włosów dopasowane do Twojego stylu. Działamy w Polsce, a wkrótce w Holandii. Skontaktuj się z nami, aby umówić wizytę.",
+        "url": "https://theartofhair.giize.com/",
         "inLanguage": "pl"
     }
     </script>
@@ -44,16 +44,16 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "The Art of Hair",
-        "image": "https://theartofhair.com/logo.png",
-        "telephone": "+48 123 456 789",
-        "email": "kontakt@theartofhair.com",
+        "image": "https://theartofhair.giize.com/logo.png",
+        "telephone": "+48 794 483 515",
+        "email": "theartofhair.iwonawach@gmail.com",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "ul. Piękna 123",
-            "addressLocality": "Warszawa",
+            "streetAddress": "ul. Insurekcji Kościuszkowskiej",
+            "addressLocality": "Jaworzno",
             "addressCountry": "PL"
         },
-        "url": "https://theartofhair.com/"
+        "url": "https://theartofhair.giize.com/"
     }
     </script>
     <style>
@@ -78,17 +78,74 @@
         .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
         .logo-img { height: 35px; }
         .logo-text { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--accent-color); }
-        .nav-button { padding: 10px 20px; font-size: 0.9rem; font-weight: 700; border: 1px solid var(--accent-color); border-radius: 5px; background-color: transparent; color: var(--accent-color); cursor: pointer; text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 8px; }
+        .nav-button { padding: 8px 15px; font-size: 0.8rem; font-weight: 700; border: 1px solid var(--accent-color); border-radius: 5px; background-color: transparent; color: var(--accent-color); cursor: pointer; text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 8px; }
         .nav-button:hover { background-color: var(--accent-color); color: var(--bg-color); }
-        .nav-button img { width: 24px; height: 24px; }
+        .nav-button.disabled { pointer-events: none; opacity: 0.6; cursor: default; }
+        .nav-button.disabled:hover { background-color: transparent; color: var(--accent-color); transform: none; box-shadow: none; }
+        .nav-button img { width: 20px; height: 20px; }
         .nav-button-text { display: inline; }
         
-        .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 10vw, 5.5rem); margin: 20px 0; color: white; line-height: 1.1; font-weight: 700; }
-        .hero p { font-size: 1.25rem; color: var(--light-gray); margin-bottom: 50px; max-width: 650px; margin-left: auto; margin-right: auto; }
-        .cta-button { padding: 18px 35px; font-size: 1.2rem; font-weight: 700; border: none; border-radius: 5px; color: #1a1001; cursor: pointer; text-decoration: none; display: inline-block; position: relative; overflow: hidden; z-index: 1; background: linear-gradient(45deg, #b8860b, #d4af37, #fcf6ba, #d4af37, #b8860b); background-size: 400% 400%; transition: all 0.5s ease; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); }
-        .cta-button::before { content: ''; position: absolute; top: 0; left: -150%; width: 100%; height: 100%; background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.5), transparent); transform: skewX(-25deg); transition: left 0.8s ease; }
-        .cta-button:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4); }
+        .hero {
+            position: relative;
+            z-index: 5;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero-logo {
+            max-width: 90vw;
+            max-height: 50vh;
+            width: auto;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            position: relative;
+            z-index: 10;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--light-gray);
+            margin-bottom: 50px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 9;
+        }
+        .cta-button {
+            padding: 18px 35px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            color: #1a1001;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            z-index: 9;
+            background: linear-gradient(45deg, #b8860b, #d4af37, #fcf6ba, #d4af37, #b8860b);
+            background-size: 400% 400%;
+            transition: all 0.5s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            transform: skewX(-25deg);
+            transition: left 0.8s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
         .cta-button:hover::before { left: 150%; }
 
         .section { padding: 100px 20px; text-align: center; }
@@ -99,23 +156,288 @@
         .slider-container { position: relative; max-width: 600px; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); background: transparent; box-sizing: border-box; }
         .slider-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
         .before-image { z-index: 1; }
-        .after-image { clip-path: inset(0 0 0 50%); z-index: 2; filter: none; }
-        .slider { position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background-color: var(--accent-color); cursor: ew-resize; z-index: 3; display: flex; align-items: center; justify-content: center; }
-        .slider img { width: 40px; height: 40px; opacity: 1; filter: none; }
-        .slider-label { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); font-size: 0.75rem; color: white; z-index: 3; }
-        .slider-label span { background: rgba(0, 0, 0, 0.7); padding: 3px 8px; border-radius: 4px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; }
-        .contact-section { background-color: var(--dark-gray); padding: 100px 20px; }
-        .contact-icons { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
-        .contact-icon { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--text-color); transition: transform 0.3s ease; }
-        .contact-icon img { width: 40px; height: 40px; margin-bottom: 10px; }
-        .contact-icon:hover { transform: scale(1.1); }
-        .contact-icon span { font-size: 1rem; font-weight: 400; }
-        .footer { padding: 60px 20px; font-size: 0.9rem; color: #777; text-align: center; border-top: 1px solid #222; }
-        .footer-logo-container { margin-bottom: 30px; }
-        .footer-logo { height: 80px; }
-        .footer-brand-text { font-size: 1.1rem; color: var(--light-gray); margin-top: 0; font-style: italic; }
-        .reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .after-image { clip-path: inset(0 0 0 50%); z-index: 2; }
+        .slider { position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background-color: var(--accent-color); cursor: ew-resize; z-index: 10; display: flex; align-items: center; justify-content: center; }
+        .slider img { width: 40px; height: 40px; opacity: 1; }
+        .slider-label { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
+        .slider-label .top-label {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 5px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+            display: none;
+        }
+        .slider-label .scroll-prompt { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.5rem; color: var(--accent-color); background: rgba(0, 0, 0, 0.7); padding: 5px 10px; border-radius: 4px; animation: blink 1s infinite; }
+        @keyframes blink {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .faq-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #b8860b, #d4af37, #fcf6ba, #d4af37, #b8860b);
+            background-size: 400% 400%;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+            animation: pulse 2s infinite;
+            color: #1a1001;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .faq-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .faq-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+        .faq-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+        .faq-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            max-width: 90%;
+            max-height: 80vh;
+            background-color: var(--dark-gray);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            z-index: 1001;
+            overflow-y: auto;
+            display: none;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .faq-modal.active {
+            display: block;
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        .faq-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .faq-close:hover {
+            color: var(--accent-color);
+        }
+        .faq-modal h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .faq-items {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-color);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Lato', sans-serif;
+        }
+        .faq-question:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        .faq-question::after {
+            content: '\25BC';
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+        .faq-question.active::after {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 12px;
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .faq-answer.active {
+            max-height: 200px;
+            padding: 12px;
+        }
+        .contact-section {
+            background-color: var(--dark-gray);
+            padding: 100px 20px;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .contact-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            min-height: 120px;
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .contact-icon img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .contact-icon.whatsapp img,
+        .contact-icon.messenger img {
+            width: 48px;
+            height: 48px;
+        }
+        .contact-icon span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            font-family: 'Playfair Display', serif;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .contact-icon:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .contact-icon.disabled {
+            pointer-events: none;
+            opacity: 0.6;
+            cursor: default;
+        }
+        .contact-icon.disabled:hover {
+            background-color: transparent;
+            color: var(--text-color);
+            transform: none;
+            box-shadow: none;
+        }
+        .coming-soon {
+            font-size: 0.6rem;
+            color: var(--light-gray);
+            margin-top: 5px;
+            font-family: 'Lato', sans-serif;
+        }
+        .footer {
+            padding: 60px 20px;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+        .footer-logo-container {
+            margin-bottom: 30px;
+        }
+        .footer-logo {
+            height: 80px;
+        }
+        .footer-brand-text {
+            font-size: 1.1rem;
+            color: var(--light-gray);
+            margin-top: 0;
+            font-style: italic;
+        }
+        .business-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .business-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        .business-info p {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            line-height: 1.6;
+        }
+        .business-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .business-info a:hover {
+            text-decoration: underline;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
         
         .language-dropdown {
             position: relative;
@@ -168,38 +490,162 @@
             color: var(--bg-color);
             font-weight: 700;
         }
-        .language-dropdown.open .language-dropdown-content { display: block; }
+        .language-dropdown.open .language-dropdown-content {
+            display: block;
+        }
 
         @media (min-width: 769px) {
-            .language-dropdown-button { font-size: 1.1rem; padding: 8px 15px; }
-            .language-dropdown-content a { padding: 10px 20px; font-size: 1.1rem; }
-            .slider-container { max-width: 600px; }
+            .language-dropdown-button {
+                font-size: 1.1rem;
+                padding: 8px 15px;
+            }
+            .language-dropdown-content a {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+            }
+            .slider-container {
+                max-width: 600px;
+            }
         }
 
         @media (max-width: 768px) {
-            body { font-size: 16px; padding-top: 60px; }
-            .container { padding: 20px 15px; }
-            .header-content { position: relative; justify-content: space-between; }
-            .header-left { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); }
-            .header-left .logo-text { display: none; }
-            .header-center { display: flex; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
-            .header-center .logo-img { display: none; }
-            .header-center .logo-text { font-size: 1.6rem; }
-            .header-right { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
-            .nav-button-text { display: none; }
-            .nav-button { padding: 8px 12px; }
-            .nav-button img { width: 20px; height: 20px; }
-            .hero p { font-size: 1.1rem; }
-            .section { padding: 50px 15px; }
-            .section-title { font-size: 2.2rem; }
-            .section-subtitle { font-size: 1.1rem; margin-bottom: 40px; }
-            .slider-container { max-width: 100%; }
-            .slider-label { font-size: 0.65rem; }
-            .slider-label span { padding: 2px 6px; max-width: 100px; }
-            .slider img { width: 32px; height: 32px; }
-            .contact-icon img { width: 30px; height: 30px; }
-            .contact-icon span { font-size: 0.9rem; }
-            .footer { padding: 50px 15px; }
+            body {
+                font-size: 16px;
+                padding-top: 60px;
+            }
+            .container {
+                padding: 20px 15px;
+            }
+            .header-content {
+                position: relative;
+                justify-content: space-between;
+            }
+            .header-left {
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .header-left .logo-text {
+                display: none;
+            }
+            .header-center {
+                display: flex;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .header-center .logo-img {
+                display: none;
+            }
+            .header-center .logo-text {
+                font-size: 1.6rem;
+            }
+            .header-right {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .nav-button-text {
+                display: none;
+            }
+            .nav-button {
+                padding: 6px 10px;
+            }
+            .nav-button img {
+                width: 16px;
+                height: 16px;
+            }
+            .hero {
+                min-height: 80vh;
+            }
+            .hero-logo {
+                max-height: 50vh;
+                margin: 15px auto;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .section {
+                padding: 50px 15px;
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .section-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 40px;
+            }
+            .slider-container {
+                max-width: 100%;
+            }
+            .slider-label .top-label {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+            .slider-label .scroll-prompt {
+                font-size: 1.2rem;
+                padding: 4px 8px;
+            }
+            .slider img {
+                width: 32px;
+                height: 32px;
+            }
+            .contact-icon {
+                width: 120px;
+                min-height: 100px;
+            }
+            .contact-icon img {
+                width: 30px;
+                height: 30px;
+            }
+            .contact-icon.whatsapp img,
+            .contact-icon.messenger img {
+                width: 36px;
+                height: 36px;
+            }
+            .contact-icon span {
+                font-size: 0.8rem;
+            }
+            .faq-toggle {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            .faq-modal {
+                width: 90%;
+                max-height: 90vh;
+                padding: 15px;
+            }
+            .faq-modal h3 {
+                font-size: 1.5rem;
+            }
+            .faq-question {
+                font-size: 0.9rem;
+            }
+            .faq-question::after {
+                font-size: 0.7rem;
+            }
+            .faq-answer {
+                font-size: 0.8rem;
+            }
+            .faq-answer.active {
+                max-height: 300px;
+            }
+            .business-info h3 {
+                font-size: 1.3rem;
+            }
+            .business-info p {
+                font-size: 0.8rem;
+            }
+            .footer {
+                padding: 50px 15px;
+            }
+            .coming-soon {
+                font-size: 0.55rem;
+            }
         }
     </style>
 </head>
@@ -225,17 +671,18 @@
                 </a>
             </div>
             <div class="header-right">
-                <a href="https://www.instagram.com/theartofhair" target="_blank" class="nav-button">
+                <div class="nav-button disabled">
                     <img src="instagram-icon.png" alt="Ikona Instagrama" loading="lazy">
                     <span class="nav-button-text">Odwiedź nasz Instagram</span>
-                </a>
+                    <span class="coming-soon">Wkrótce dostępne</span>
+                </div>
             </div>
         </div>
     </header>
 
     <section class="hero container">
-        <h1 class="reveal">The Art of Hair</h1>
-        <p class="reveal">Przekształć swój wygląd dzięki naszym profesjonalnym usługom fryzjerskim. Tworzymy spersonalizowane stylizacje, które odzwierciedlają Twoją wyjątkową osobowość. Skontaktuj się z nami już dziś, aby umówić wizytę.</p>
+        <img src="logo-typography.png" alt="The Art of Hair Logo z typografią" class="hero-logo reveal" loading="lazy">
+        <p class="reveal">Przekształć swój wygląd dzięki naszym usługom przedłużania włosów. Tworzymy spersonalizowane stylizacje, które odzwierciedlają Twoją wyjątkową osobowość. Działamy w Polsce, a wkrótce także w Holandii! Skontaktuj się z nami już dziś, aby umówić wizytę.</p>
         <a href="#contact-section" class="cta-button reveal" aria-label="Skontaktuj się z nami">Skontaktuj się z nami</a>
     </section>
 
@@ -243,14 +690,14 @@
         <section class="section">
             <div class="container">
                 <h2 class="section-title reveal">Twój Styl, Nasze Rzemiosło</h2>
-                <p class="section-subtitle reveal">W The Art of Hair wierzymy w tworzenie fryzur, które podkreślają Twoją indywidualność. Dzięki wieloletniemu doświadczeniu i pasji do precyzji dostarczamy rezultaty, które sprawiają, że czujesz się pewnie i odświeżony.</p>
+                <p class="section-subtitle reveal">W The Art of Hair wierzymy, że przedłużanie włosów to coś więcej niż usługa – to sztuka podkreślania Twojego naturalnego piękna. Działamy w Polsce, a wkrótce także w Holandii. Dzięki wieloletniemu doświadczeniu i dbałości o każdy detal tworzymy efekt, który dodaje pewności siebie i odświeża Twój wizerunek.</p>
             </div>
         </section>
 
         <section class="section gallery-section">
             <div class="container">
                 <h2 class="section-title reveal">Przed i Po</h2>
-                <p class="section-subtitle reveal">Przesuń suwak, aby zobaczyć, jak nasze usługi fryzjerskie przekształcają wygląd naszych klientów. Oto przykład naszej pracy, a wkrótce pojawi się więcej!</p>
+                <p class="section-subtitle reveal">Przesuń suwak, aby zobaczyć, jak nasze usługi przedłużania włosów przekształcają wygląd naszych klientów. Oto przykład naszej pracy, a wkrótce pojawi się więcej!</p>
                 <div class="gallery-container reveal">
                     <div class="slider-container">
                         <img src="before1.jpg" alt="Przed stylizacją" class="slider-image before-image" loading="lazy">
@@ -259,7 +706,8 @@
                             <img src="arrows-icon.png" alt="Ikona strzałek suwaka" loading="lazy">
                         </div>
                         <div class="slider-label">
-                            <span class="center-label">Po</span>
+                            <span class="top-label"></span>
+                            <span class="scroll-prompt">Przewiń</span>
                         </div>
                     </div>
                 </div>
@@ -271,26 +719,84 @@
                 <h2 class="section-title reveal">Skontaktuj się z nami</h2>
                 <p class="section-subtitle reveal">Gotowy na zmianę stylu? Skontaktuj się z nami za pomocą preferowanej metody poniżej, aby umówić wizytę lub zadać pytania.</p>
                 <div class="contact-icons reveal">
-                    <a href="tel:+48123456789" class="contact-icon">
+                    <a href="tel:+48794483515" class="contact-icon">
                         <img src="phone-icon.png" alt="Ikona telefonu" loading="lazy">
-                        <span>+48 123 456 789</span>
+                        <span>+48 794 483 515</span>
                     </a>
-                    <a href="mailto:kontakt@theartofhair.com" class="contact-icon">
+                    <a href="mailto:theartofhair.iwonawach@gmail.com?subject=Zapytanie od The Art of Hair" class="contact-icon email-link">
                         <img src="email-icon.png" alt="Ikona e-mail" loading="lazy">
-                        <span>kontakt@theartofhair.com</span>
+                        <span>E-mail</span>
                     </a>
-                    <a href="https://wa.me/48123456789" target="_blank" class="contact-icon">
+                    <a href="https://wa.me/48794483515" class="contact-icon whatsapp">
                         <img src="whatsapp-icon.png" alt="Ikona WhatsApp" loading="lazy">
                         <span>WhatsApp</span>
                     </a>
-                    <a href="https://m.me/theartofhair" target="_blank" class="contact-icon">
+                    <div class="contact-icon disabled messenger">
                         <img src="messenger-icon.png" alt="Ikona Messenger" loading="lazy">
                         <span>Messenger</span>
-                    </a>
+                        <span class="coming-soon">Wkrótce dostępne</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <button class="faq-toggle" aria-label="Otwórz najczęściej zadawane pytania">?</button>
+    <div class="faq-overlay"></div>
+    <div class="faq-modal">
+        <button class="faq-close" aria-label="Zamknij FAQ">✕</button>
+        <h3>Najczęściej Zadawane Pytania</h3>
+        <div class="faq-items">
+            <div class="faq-item">
+                <button class="faq-question">Jak długo trwa zabieg przedłużania włosów?</button>
+                <div class="faq-answer">Zabieg trwa zazwyczaj od 2 do 4 godzin, w zależności od techniki i ilości przedłużanych włosów.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Czy przedłużanie włosów jest bezpieczne dla naturalnych włosów?</button>
+                <div class="faq-answer">Tak, stosujemy bezpieczne techniki, które minimalizują uszkodzenia naturalnych włosów, jeśli są odpowiednio pielęgnowane.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Jak umówić się na wizytę?</button>
+                <div class="faq-answer">Skontaktuj się z nami przez telefon, e-mail lub WhatsApp, aby ustalić dogodny termin wizyty.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Jakie techniki przedłużania oferujecie?</button>
+                <div class="faq-answer">Oferujemy różne techniki, takie jak metoda keratynowa, taśmowa czy mikroringi, dostosowane do potrzeb klienta.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Jak długo utrzymują się przedłużane włosy?</button>
+                <div class="faq-answer">Przy odpowiedniej pielęgnacji przedłużane włosy mogą utrzymywać się od 2 do 6 miesięcy.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Czy mogę farbować przedłużane włosy?</button>
+                <div class="faq-answer">Tak, ale zalecamy konsultację z nami, aby dobrać odpowiednią farbę i technikę.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Jak dbać o przedłużane włosy?</button>
+                <div class="faq-answer">Zalecamy używanie delikatnych szamponów, unikanie gorących narzędzi bez ochrony i regularne szczotkowanie specjalną szczotką.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Czy oferujecie konsultacje przed zabiegiem?</button>
+                <div class="faq-answer">Tak, oferujemy bezpłatne konsultacje, aby omówić Twoje potrzeby i dobrać najlepszą metodę.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Jakie są koszty przedłużania włosów?</button>
+                <div class="faq-answer">Koszty zależą od techniki i długości włosów. Skontaktuj się z nami, aby uzyskać szczegółową wycenę.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Czy przedłużanie włosów boli?</button>
+                <div class="faq-answer">Nie, zabieg jest bezbolesny, choć możesz odczuwać lekki dyskomfort podczas aplikacji.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Czy muszę kupić włosy przed zabiegiem, czy fryzjerka wybiera włosy?</button>
+                <div class="faq-answer">Oferujemy możliwość dostarczenia włosów przez nas, dopasowanych do Twoich potrzeb, ale możesz także przynieść własne włosy po konsultacji.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Czy mogę przynieść własne włosy, czy muszę użyć włosów wybranych przez fryzjerkę?</button>
+                <div class="faq-answer">Możesz przynieść własne włosy, pod warunkiem że spełniają nasze standardy jakości. Skonsultuj się z nami wcześniej, aby upewnić się, że są odpowiednie.</div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -299,6 +805,14 @@
             </div>
             <p class="footer-brand-text"><strong>The Art of Hair</strong><br>
             "Twoje włosy, Twoja historia, nasze arcydzieło."</p>
+            <div class="business-info">
+                <h3>Kontakt i Adres</h3>
+                <p>The Art of Hair<br>
+                   ul. Insurekcji Kościuszkowskiej, Jaworzno, Polska<br>
+                   Telefon: <a href="tel:+48794483515">+48 794 483 515</a><br>
+                   E-mail: <a href="mailto:theartofhair.iwonawach@gmail.com">theartofhair.iwonawach@gmail.com</a><br>
+                   Działamy w Polsce, a wkrótce także w Holandii!</p>
+            </div>
             <p style="margin-top: 30px;">© 2025 The Art of Hair. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
@@ -318,6 +832,23 @@
             });
         });
 
+        const faqToggle = document.querySelector('.faq-toggle');
+        const faqOverlay = document.querySelector('.faq-overlay');
+        const faqModal = document.querySelector('.faq-modal');
+        const faqClose = document.querySelector('.faq-close');
+        faqToggle.addEventListener('click', () => {
+            faqOverlay.classList.toggle('active');
+            faqModal.classList.toggle('active');
+        });
+        faqClose.addEventListener('click', () => {
+            faqOverlay.classList.remove('active');
+            faqModal.classList.remove('active');
+        });
+        faqOverlay.addEventListener('click', () => {
+            faqOverlay.classList.remove('active');
+            faqModal.classList.remove('active');
+        });
+
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -329,42 +860,83 @@
         }, { threshold: 0.1 });
         revealElements.forEach(el => { revealObserver.observe(el); });
 
+        // Fallback dla przycisku e-mail
+        document.querySelector('.email-link').addEventListener('click', (e) => {
+            const email = 'theartofhair.iwonawach@gmail.com';
+            try {
+                navigator.clipboard.writeText(email).then(() => {
+                    alert(`Adres e-mail: ${email} został skopiowany do schowka.`);
+                }).catch(() => {
+                    alert(`Adres e-mail: ${email}. Skopiuj ręcznie.`);
+                });
+            } catch (err) {
+                alert(`Adres e-mail: ${email}. Skopiuj ręcznie.`);
+            }
+        });
+
         const sliders = document.querySelectorAll('.slider-container');
         sliders.forEach(sliderContainer => {
             const slider = sliderContainer.querySelector('.slider');
             const afterImage = sliderContainer.querySelector('.after-image');
-            const centerLabel = sliderContainer.querySelector('.center-label');
+            const beforeImage = sliderContainer.querySelector('.before-image');
+            const topLabel = sliderContainer.querySelector('.top-label');
+            const scrollPrompt = sliderContainer.querySelector('.scroll-prompt');
             let isDragging = false;
+            let hasInteracted = false;
+
+            afterImage.addEventListener('error', () => {
+                console.error('Błąd ładowania after1.jpg');
+            });
+            beforeImage.addEventListener('error', () => {
+                console.error('Błąd ładowania before1.jpg');
+            });
 
             const updateSlider = (x) => {
                 const rect = sliderContainer.getBoundingClientRect();
-                const offsetX = x - rect.left;
+                const offsetX = Math.max(0, Math.min(x - rect.left, rect.width));
                 let percentage = (offsetX / rect.width) * 100;
                 percentage = Math.max(0, Math.min(100, percentage));
                 afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
                 slider.style.left = `${percentage}%`;
-                // Zmiana tekstu napisu na środku
-                centerLabel.textContent = percentage < 50 ? 'Po' : 'Przed stylizacją';
+
+                if (!hasInteracted && Math.abs(percentage - 50) < 2) {
+                    topLabel.style.display = 'none';
+                    scrollPrompt.style.display = 'block';
+                } else {
+                    scrollPrompt.style.display = 'none';
+                    topLabel.style.display = 'block';
+                    topLabel.textContent = percentage < 49 ? 'Po stylizacji' : 'Przed stylizacją';
+                }
+
+                console.log(`Slider position: ${slider.style.left}, After image clipPath: ${afterImage.style.clipPath}, hasInteracted: ${hasInteracted}`);
             };
 
             slider.addEventListener('mousedown', (e) => {
+                console.log('mousedown triggered');
+                e.preventDefault();
                 isDragging = true;
+                hasInteracted = true;
                 updateSlider(e.clientX);
             });
 
             slider.addEventListener('touchstart', (e) => {
+                console.log('touchstart triggered');
+                e.preventDefault();
                 isDragging = true;
+                hasInteracted = true;
                 updateSlider(e.touches[0].clientX);
             });
 
             document.addEventListener('mousemove', (e) => {
                 if (isDragging) {
+                    e.preventDefault();
                     updateSlider(e.clientX);
                 }
             });
 
             document.addEventListener('touchmove', (e) => {
                 if (isDragging) {
+                    e.preventDefault();
                     updateSlider(e.touches[0].clientX);
                 }
             });
@@ -376,15 +948,37 @@
             document.addEventListener('touchend', () => {
                 isDragging = false;
             });
+
+            const rect = sliderContainer.getBoundingClientRect();
+            const initialX = rect.left + (rect.width / 2);
+            updateSlider(initialX);
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-question').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                if (!isActive) {
+                    answer.classList.add('active');
+                    button.classList.add('active');
+                }
+            });
         });
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-18M8JLYN5S"></script>
+    <script async src="TU WPISZ GOOGLETAG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-18M8JLYN5S');
+      gtag('config', 'tu wpisz same liczby i litery');
     </script>
 </body>
 </html>
